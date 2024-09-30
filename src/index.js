@@ -30,8 +30,11 @@ client.on('messageCreate', (message) => {
 client.on('interactionCreate', (interaction) => {
     if (!interaction.isChatInputCommand()) return;
 
-    if (interaction.commandName === 'hey') {
-        interaction.reply('hey!');
+    if (interaction.commandName === 'add') {
+        const num1 = interaction.options.get('erste-zahl').value;
+        const num2 = interaction.options.get('zweite-zahl').value;
+
+        interaction.reply(`Die Summe wenn man diese beiden Zahlen addiert ist ${num1 + num2}! Was du mit dieser Information anfangen willst ist dir überlassen!`);
     }
 })
 
