@@ -24,17 +24,22 @@ const commands = [
             value: 3,
           }
         ],
-        required: true,  // Korrekt: required
+        required: true,
       },
       {
         name: 'zweite-zahl',
         description: 'Die zweite Zahl',
         type: ApplicationCommandOptionType.Number,
-        required: true,  // Korrekt: required
+        required: true,
       },
     ],
   },
+  {
+    name: 'embed',
+    description: 'Erstellt ein Embed ohne weitere Optionen.',
+  },
 ];
+
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
